@@ -110,6 +110,32 @@ header{backgrou0nd:#fff;border-bottom:1px solid #e5ebf2;position:sticky;top:0;z-
   stroke-linecap: round !important;
   stroke-linejoin: round !important;
   display: block !important;
+}.cards {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
+
+.card {
+  width: auto !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  padding: 24px !important;
+  min-height: 190px !important;
+}
+
+.card .icon {
+  width: 42px !important;
+  height: 42px !important;
+  margin-bottom: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.card .icon svg {
+  width: 30px !important;
+  height: 30px !important;
 }</style>
 </head>
 <body>
