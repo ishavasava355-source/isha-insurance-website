@@ -78,10 +78,16 @@ h1 span{color:#1266d6}
 }
 
 .whyItem{
-  background:#fff;
-  border:1px solid #e5ebf2;
-  border-radius:14px;
-  padding:24px;
+  background:#f8fbff;
+  border:1px solid #e1eaf4;
+  border-radius:12px;
+  padding:22px;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.whyItem:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(16,45,82,.08);
 }
 }
 .card{min-height:190px}
@@ -130,8 +136,7 @@ h1 span{color:#1266d6}
 }
 
 .why{background:#fff}
-.whyGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-
+.whyGrid{ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
 .lead{background:#102d52;color:#fff}
 .leadGrid{
   display:grid;
