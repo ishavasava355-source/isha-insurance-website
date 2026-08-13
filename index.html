@@ -7,6 +7,20 @@
 <meta name="description" content="Insurance Advisor & Consultant serving individuals and businesses in Vadodara and across Gujarat.">
 
 <style>
+
+.office-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.office-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,sans-serif;color:#172033;background:#f7f9fc;line-height:1.6}
@@ -589,6 +603,26 @@ Details: ${document.getElementById('message').value || 'Not provided'}`;
   );
 }
 </script>
+<section class="office-section">
+  <div class="office-card">
+    <div class="office-icon">📍</div>
 
+    <h2>Visit Our Office</h2>
+
+    <p class="office-name">Isha Vasava – Insurance Advisor</p>
+
+    <p class="office-address">
+      TF-11, Earth Eon, Sama Savli Road<br>
+      Opp. Urmi School, Sama Lake<br>
+      Vadodara – 390008
+    </p>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=TF-11%2C%20Earth%20Eon%2C%20Sama%20Savli%20Road%2C%20Opp.%20Urmi%20School%2C%20Sama%20Lake%2C%20Vadodara%20390008"
+       target="_blank"
+       class="directions-btn">
+       📍 Get Directions
+    </a>
+  </div>
+</section>
 </body>
 </html>
