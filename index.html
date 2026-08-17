@@ -272,6 +272,52 @@ footer{background:#0c223d;color:#cbd7e5;text-align:center;padding:25px;font-size
     padding:18px 10px;
   }
 }
+}/* SERVICE DROPDOWN */
+.service-dropdown {
+  cursor: pointer;
+}
+
+.service-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.service-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-dropdown h3 span {
+  font-size: 20px;
+  margin-left: 6px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.service-dropdown[open] h3 span {
+  transform: rotate(180deg);
+}
+
+.dropdown-products {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-products div {
+  padding: 9px 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown-products div:last-child {
+  border-bottom: none;
+}
+
+.dropdown-products div:hover {
+  padding-left: 10px;
 }
 </style>
 </head>
@@ -336,91 +382,190 @@ footer{background:#0c223d;color:#cbd7e5;text-align:center;padding:25px;font-size
   <div class="container">
 
     <div class="title">
-     <h2>Insurance Solutions</h2>
-<p>Protection and insurance solutions for individuals, families and businesses.</p>
+      <h2>Insurance Solutions</h2>
+      <p>Protection and insurance solutions for individuals, families and businesses.</p>
     </div>
 
     <div class="cards">
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M5 16l1-5h12l1 5M7 16v2m10-2v2M6 11l2-4h8l2 4M4 16h16M7 16a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-          </svg>
-        </div>
-        <h3>Motor Insurance</h3>
-        <p>Two-wheeler, private car and commercial vehicle insurance.</p>
-      </div>
+      <!-- MOTOR INSURANCE -->
+      <details class="card service-dropdown">
+        <summary>
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 16l1-5h12l1 5M7 16v2m10-2v2M6 11l2-4h8l2 4M4 16h16M7 16a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+            </svg>
+          </div>
+          <h3>Motor Insurance <span>⌄</span></h3>
+          <p>Two-wheeler, private car and commercial vehicle insurance.</p>
+        </summary>
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M9 3v6H3v6h6v6h6v-6h6V9h-6V3H9z"/>
-          </svg>
+        <div class="dropdown-products">
+          <div>2 Wheeler</div>
+          <div>Private Car / 4 Wheeler</div>
+          <div>Commercial Vehicle</div>
+          <div>Goods Carrying Vehicle</div>
+          <div>Passenger Carrying Vehicle</div>
+          <div>Bus</div>
+          <div>Truck</div>
+          <div>Tractor</div>
+          <div>Miscellaneous-D Vehicle</div>
         </div>
-        <h3>Health Insurance</h3>
-        <p>Individual and family health protection options.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M20.8 8.8c0 5.5-8.8 10.2-8.8 10.2S3.2 14.3 3.2 8.8C3.2 6.1 5.3 4 8 4c1.7 0 3.2.9 4 2.2C12.8 4.9 14.3 4 16 4c2.7 0 4.8 2.1 4.8 4.8z"/>
-          </svg>
-        </div>
-        <h3>Life Insurance</h3>
-        <p>Life protection and long-term financial planning solutions.</p>
-      </div>
+      <!-- HEALTH INSURANCE -->
+      <details class="card service-dropdown">
+        <summary>
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3v6H3v6h6v6h6v-6h6V9h-6V3H9z"/>
+            </svg>
+          </div>
+          <h3>Health Insurance <span>⌄</span></h3>
+          <p>Individual and family health protection options.</p>
+        </summary>
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M3 12h11M14 12l-4-4m4 4l-4 4M14 5h2a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-2"/>
-          </svg>
+        <div class="dropdown-products">
+          <div>Individual Health Insurance</div>
+          <div>Family Floater</div>
+          <div>Senior Citizen Health Insurance</div>
+          <div>Group Health Insurance</div>
+          <div>Critical Illness Cover</div>
+          <div>Personal Accident Cover</div>
         </div>
-        <h3>Travel Insurance</h3>
-        <p>Protection for domestic and international travel.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M3 11l9-7 9 7M5 10v10h14V10M9 20v-6h6v6"/>
-          </svg>
-        </div>
-        <h3>Home Insurance</h3>
-        <p>Protection options for your home and eligible contents.</p>
-      </div>
+      <!-- LIFE INSURANCE -->
+      <details class="card service-dropdown">
+        <summary>
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M20.8 8.8c0 5.5-8.8 10.2-8.8 10.2S3.2 14.3 3.2 8.8C3.2 6.1 5.3 4 8 4c1.7 0 3.2.9 4 2.2C12.8 4.9 14.3 4 16 4c2.7 0 4.8 2.1 4.8 4.8z"/>
+            </svg>
+          </div>
+          <h3>Life Insurance <span>⌄</span></h3>
+          <p>Life protection and long-term financial planning solutions.</p>
+        </summary>
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 3c1.5 3 5 4.5 5 8.5A5 5 0 0 1 7 12c0-2.5 1.5-4.5 3-6 .5 2 1.5 3 2.5 3.5C13 7 12.5 5 12 3z"/>
-          </svg>
+        <div class="dropdown-products">
+          <div>Term Insurance</div>
+          <div>Whole Life Insurance</div>
+          <div>Endowment Plan</div>
+          <div>ULIP</div>
+          <div>Child Plan</div>
+          <div>Retirement / Pension Plan</div>
         </div>
-        <h3>Fire Insurance</h3>
-        <p>Risk protection options for commercial and industrial assets.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M4 17h16M6 17l2-5h8l2 5M10 12V7h4v5M12 7V4M12 4l3 2"/>
-          </svg>
-        </div>
-        <h3>Marine Insurance</h3>
-        <p>Transit and cargo-related insurance solutions.</p>
-      </div>
+      <!-- TRAVEL INSURANCE -->
+      <details class="card service-dropdown">
+        <summary>
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 12h11M14 12l-4-4m4 4l-4 4M14 5h2a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-2"/>
+            </svg>
+          </div>
+          <h3>Travel Insurance <span>⌄</span></h3>
+          <p>Protection for domestic and international travel.</p>
+        </summary>
 
-      <div class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M4 8h16v11H4zM8 8V6h8v2M4 12h16M10 12v2h4v-2"/>
-          </svg>
+        <div class="dropdown-products">
+          <div>Domestic Travel Insurance</div>
+          <div>International Travel Insurance</div>
+          <div>Student Travel Insurance</div>
+          <div>Senior Citizen Travel Insurance</div>
+          <div>Family Travel Insurance</div>
         </div>
-        <h3>Business Insurance</h3>
-        <p>Insurance solutions for businesses and commercial risks.</p>
-      </div>
+      </details>
+
+      <!-- HOME INSURANCE -->
+      <details class="card service-dropdown">
+        <summary>
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 11l9-7 9 7M5 10v10h14V10M9 20v-6h6v6"/>
+            </svg>
+          </div>
+          <h3>Home Insurance <span>⌄</span></h3>
+          <p>Protection options for your home and eligible contents.</p>
+        </summary>
+
+        <div class="dropdown-products">
+          <div>Building Insurance</div>
+          <div>Household Contents Insurance</div>
+          <div>Fire & Allied Perils</div>
+          <div>Burglary / Theft Cover</div>
+          <div>Natural Calamity Cover</div>
+        </div>
+      </details>
+
+      <!-- FIRE INSURANCE -->
+      <details class="card service-dropdown">
+        <summary>
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3c1.5 3 5 4.5 5 8.5A5 5 0 0 1 7 12c0-2.5 1.5-4.5 3-6 .5 2 1.5 3 2.5 3.5C13 7 12.5 5 12 3z"/>
+            </svg>
+          </div>
+          <h3>Fire Insurance <span>⌄</span></h3>
+          <p>Risk protection options for commercial and industrial assets.</p>
+        </summary>
+
+        <div class="dropdown-products">
+          <div>Standard Fire & Special Perils</div>
+          <div>Industrial All Risk</div>
+          <div>Bharat Sookshma Udyam</div>
+          <div>Bharat Laghu Udyam</div>
+          <div>Bharat Griha Raksha</div>
+        </div>
+      </details>
+
+      <!-- MARINE INSURANCE -->
+      <details class="card service-dropdown">
+        <summary>
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 17h16M6 17l2-5h8l2 5M10 12V7h4v5M12 7V4M12 4l3 2"/>
+            </svg>
+          </div>
+          <h3>Marine Insurance <span>⌄</span></h3>
+          <p>Transit and cargo-related insurance solutions.</p>
+        </summary>
+
+        <div class="dropdown-products">
+          <div>Marine Cargo Insurance</div>
+          <div>Inland Transit Insurance</div>
+          <div>Import / Export Cargo</div>
+          <div>Annual Open Policy</div>
+          <div>Single Transit Policy</div>
+        </div>
+      </details>
+
+      <!-- BUSINESS INSURANCE -->
+      <details class="card service-dropdown">
+        <summary>
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 8h16v11H4zM8 8V6h8v2M4 12h16M10 12v2h4v-2"/>
+            </svg>
+          </div>
+          <h3>Business Insurance <span>⌄</span></h3>
+          <p>Insurance solutions for businesses and commercial risks.</p>
+        </summary>
+
+        <div class="dropdown-products">
+          <div>Shop Insurance</div>
+          <div>Office Insurance</div>
+          <div>Liability Insurance</div>
+          <div>Professional Indemnity</div>
+          <div>Directors & Officers Liability</div>
+          <div>Cyber Insurance</div>
+          <div>Machinery Breakdown</div>
+          <div>Contractor All Risk</div>
+          <div>Workmen Compensation</div>
+          <div>Group Personal Accident</div>
+        </div>
+      </details>
 
     </div>
   </div>
