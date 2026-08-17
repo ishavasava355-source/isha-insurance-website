@@ -303,8 +303,8 @@ footer{background:#0c223d;color:#cbd7e5;text-align:center;padding:25px;font-size
   border-top: 1px solid #ddd;
 }
 
-.dropdown-products div {
-  padding: 9px 5px;
+.dropdown-products div,
+.dropdown-products a {  padding: 9px 5px;
   border-bottom: 1px solid #eee;
   font-size: 14px;
   color: #555;
@@ -316,8 +316,8 @@ footer{background:#0c223d;color:#cbd7e5;text-align:center;padding:25px;font-size
   border-bottom: none;
 }
 
-.dropdown-products div:hover {
-  padding-left: 10px;
+.dropdown-products div:hover,
+.dropdown-products a:hover {  padding-left: 10px;
 }
 </style>
 </head>
@@ -769,5 +769,18 @@ Details: ${document.getElementById('message').value || 'Not provided'}`;
     </a>
   </div>
 </section>
+<script>
+document.querySelectorAll('.dropdown-products div').forEach(function(product) {
+  product.addEventListener('click', function() {
+    const productName = this.textContent.trim();
+
+    const message = 'Hello Isha, I am interested in ' + productName + ' Insurance. Please share more details.';
+
+    const whatsappURL =
+      'https://wa.me/917874101868?text=' + encodeURIComponent(message);
+
+    window.open(whatsappURL, '_blank');
+  });});
+</script>
 </body>
 </html>
